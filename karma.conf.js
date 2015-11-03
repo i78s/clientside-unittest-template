@@ -19,6 +19,7 @@ module.exports = function (config) {
         files: [
             'node_modules/power-assert/build/power-assert.js',
             'node_modules/sinon/pkg/sinon.js',
+            'test/fixtures/**/*.html',
             'test/**/*Spec.js'
         ],
 
@@ -31,6 +32,7 @@ module.exports = function (config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             // add webpack as preprocessor
+            'test/fixtures/**/*.html': ['html2js'],
             'test/**/*Spec.js': ['webpack']
         },
 

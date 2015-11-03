@@ -4,7 +4,12 @@ describe('Util', () => {
 
     let div;
     beforeEach(() => {
-        div = document.createElement('div');
+        document.body.innerHTML = __html__["test/fixtures/util.html"];
+        div = document.getElementById('target');
+    });
+
+    afterEach(() => {
+        document.body.innerHTML = "";
     });
 
     it('hasClass', () => {
